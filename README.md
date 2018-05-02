@@ -3,7 +3,6 @@
 `custom-redis`提供了多种访问`redis`的方式，具体使用方式参考如下:
 
 依赖jar包:
-
 	`custom-redis.jar`
 	`commons-attributes-api-2.2.jar`
 	`commons-beanutils-1.8.3.jar`
@@ -20,8 +19,8 @@
 	classpath:/custom-redis.xml
 使用代码:
 
-	`cloudyCart`指应用名,具体解释参考custom-redis.xml解释部分
-	`ICustomRedis`是jedis的封装,通过`ICustomRedis`可以执行redis的所有方法
+	cloudyCart指应用名,具体解释参考custom-redis.xml解释部分
+	ICustomRedis是jedis的封装,通过ICustomRedis可以执行redis的所有方法
 ```Java
 	CustomRedisFactory f = CustomRedisFactory.getInstance();
 	ICustomRedis redis1 = f.getCustomRedisByAppId("cloudyCart","");
@@ -29,14 +28,14 @@
 ```
 配置文件`custom-redis.xml`说明:
 
-	custom-redis按照应用为单位管理`redis`
-	可以在一个`custom-redis.xml`文件中配置多个应用
-	每个应用对应了多种方式实现`redis`集群的管理
+	custom-redis按照应用为单位管理redis
+	可以在一个custom-redis.xml文件中配置多个应用
+	每个应用对应了多种方式实现redis集群的管理
 配置文件分成3个部分
 
-	1、<appnode></appnode>以应用为单位配置`redis`集群，一个配置文件中可以配置多个应用，一个应用可以配置多个集群节点，具体请参考
-	2、<clusternode></clusternode>配置各个集群，一个集群可以按照集群类型配置多个`redis`节点
-	3、<servernode></servernode>配置所有需要的`redis`节点，每个节点配置。
+	1、<appnode></appnode>以应用为单位配置redis集群，一个配置文件中可以配置多个应用，一个应用可以配置多个集群节点，具体请参考
+	2、<clusternode></clusternode>配置各个集群，一个集群可以按照集群类型配置多个redis节点
+	3、<servernode></servernode>配置所有需要的redis节点，每个节点配置。
 配置文件示例:
 
 	<?xml version="1.0" encoding="UTF-8"?>
