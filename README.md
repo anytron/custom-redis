@@ -22,7 +22,7 @@ custom-redis提供了多种访问redis的方式，具体使用方式参考如下
 
 	cloudyCart指应用名,具体解释参考custom-redis.xml解释部分
 	ICustomRedis是jedis的封装,通过ICustomRedis可以执行redis的所有方法
-```
+```Java
 	CustomRedisFactory f = CustomRedisFactory.getInstance();
 	ICustomRedis redis1 = f.getCustomRedisByAppId("cloudyCart","");
 	redis1.set("key1", "value001");
