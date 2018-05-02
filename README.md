@@ -2,18 +2,18 @@
 
 `custom-redis`提供了多种访问`redis`的方式，具体使用方式参考如下:
 
-依赖jar包:
-`custom-redis.jar`
-`commons-attributes-api-2.2.jar`
-`commons-beanutils-1.8.3.jar`
-`commons-collections-3.2.1.jar`
-`commons-configuration-1.5.jar`
-`commons-io-2.1.jar`
-`commons-lang-2.4.jar`
-`commons-logging-1.1.1.jar`
-`commons-pool-1.3.jar`
-`jedis-2.1.0.jar`
-`log4j-1.2.16.jar`
+依赖jar包:<br>
+`custom-redis.jar`<br>
+`commons-attributes-api-2.2.jar`<br>
+`commons-beanutils-1.8.3.jar`<br>
+`commons-collections-3.2.1.jar`<br>
+`commons-configuration-1.5.jar`<br>
+`commons-io-2.1.jar`<br>
+`commons-lang-2.4.jar`<br>
+`commons-logging-1.1.1.jar`<br>
+`commons-pool-1.3.jar`<br>
+`jedis-2.1.0.jar`<br>
+`log4j-1.2.16.jar`<br>
 依赖配置文件:
 
 	classpath:/custom-redis.xml
