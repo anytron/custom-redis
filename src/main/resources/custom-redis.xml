@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redisrouting>
+	<!-- 是否启动初始化redis false=不启动 默认为启动 如果该配置文件不存在也不启动!-->
+	<available>true</available>
+	<!-- 节点监控时间间隔 缺省60000 单位毫秒 -->
+	<nodemonitorinterval>60000</nodemonitorinterval>
+	<appnode>
+		<anode><!-- 可配置多个 -->
+			<id>user1</id>
+			<!-- 多个cluster必须用竖线分割,cluster1对应clusternode中配置的id -->
+			<clusternodes>cluster1</clusternodes>
+			<dispatch>ROUTING</dispatch>
+			<!-- TRAILNUMBER尾号 ONLY只读第一个 HASH一致性哈希算法-->
+			<clusterstrategy>ONLY</clusterstrategy>
+			<!-- 是否监控 默认为false 只有=true monitorinterval才有效 -->
+			<ismonitor>true</ismonitor>
+			<!-- 间隔毫秒 -->
+			<monitorinterval>60000</monitorinterval>
+		</anode>
+	</appnode>
+	<!-- redis节点配置开始 -->
+	<clusternode>
+		<cnode><!-- 可配置多个 -->
+			<id>cluster1</id>
+			<readstrategy>HASHREAD</readstrategy>
+			<readservernodes>snode1</readservernodes>
+			<writerstrategy>MUTIWRITE</writerstrategy>
+			<writeservernodes>snode1</writeservernodes>
+			<!-- 该节点对应的尾号,当appnode->anode->clusterstrategy=TRAILNUMBER时才有效 -->
+			<trailnumber>00-00</trailnumber>
+		</cnode>
+	</clusternode>
+	<!-- servernode 对应每一台需要用到的redis服务器 -->
+	<servernode>
+		<node><!-- 可配置多台 -->
+			<id>snode1</id>
+			<maxActive>200</maxActive><!-- 最大的活动连接 -->
+			<maxIdle>100</maxIdle><!-- 最大的空闲连接 -->
+			<maxWait>1000</maxWait><!-- 最大的等待时间 -->
+			<host>127.0.0.1</host><port>6379</port><!--Ip地址和端口 -->
+		</node>
+	</servernode>
+	<!-- redis节点 配置结束 -->
+</redisrouting>
