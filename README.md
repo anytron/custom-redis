@@ -22,13 +22,16 @@ custom-redis提供了多种访问redis的方式，具体使用方式参考如下
 
 	cloudyCart指应用名,具体解释参考custom-redis.xml解释部分
 	ICustomRedis是jedis的封装,通过ICustomRedis可以执行redis的所有方法
-
+<code>
 	CustomRedisFactory f = CustomRedisFactory.getInstance();
 	ICustomRedis redis1 = f.getCustomRedisByAppId("cloudyCart","");
-	redis1.set("key1", "dfffffffffffffffffff");
+	redis1.set("key1", "value001");
+<code/>
 配置文件custom-redis.xml说明:
 
-	custom-redis按照应用为单位管理redis，可以在一个custom-redis.xml文件中配置多个应用，每个应用对应了多种方式实现redis集群的管理。
+	custom-redis按照应用为单位管理redis
+	可以在一个custom-redis.xml文件中配置多个应用
+	每个应用对应了多种方式实现redis集群的管理
 配置文件分成3个部分
 
 	1、<appnode></appnode>以应用为单位配置redis集群，一个配置文件中可以配置多个应用，一个应用可以配置多个集群节点，具体请参考
