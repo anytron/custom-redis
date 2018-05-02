@@ -14,7 +14,7 @@
 `commons-pool-1.3.jar`<br>
 `jedis-2.1.0.jar`<br>
 `log4j-1.2.16.jar`<br>
-或更新的版本jar包,但值得注意的是比如`jedis`最新jar包有方法变动,需要更改代码
+或更新的版本jar包,但值得注意的是比如`jedis`最新jar包有方法变动,需要更改代码<br>
 依赖配置文件:
 
 	classpath:/custom-redis.xml
