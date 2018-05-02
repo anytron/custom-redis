@@ -24,7 +24,7 @@ custom-redis提供了多种访问redis的方式，具体使用方式参考如下
 	ICustomRedis是jedis的封装,通过ICustomRedis可以执行redis的所有方法
 
 	CustomRedisFactory f = CustomRedisFactory.getInstance();
-	ICustomRedis redis1 = f.getCustomRedisByAppId("user1","");
+	ICustomRedis redis1 = f.getCustomRedisByAppId("cloudyCart","");
 	redis1.set("key1", "dfffffffffffffffffff");
 配置文件custom-redis.xml说明:
 
