@@ -15,7 +15,7 @@ import redis.clients.jedis.JedisPoolConfig;
  * 读取路由配置文件 初始化配置中的路由节点信息
  * <P>File name : RedisRoutingManager.java </P>
  * <P>Author : anytron </P> 
- * <P>Date : 2013-1-29 </P>
+ * <P>Date : 2016-1-29 </P>
  */
 @SuppressWarnings("unchecked")
 public class RedisRoutingManager {
@@ -123,7 +123,7 @@ public class RedisRoutingManager {
 	 * 返回节点对应的连接池
 	 * RedisRoutingManager.getJedisPool()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param node
 	 * @return
 	 */
@@ -135,7 +135,7 @@ public class RedisRoutingManager {
 	 * 返回路由节点
 	 * RedisRoutingManager.getRedisCluster()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param clusterId
 	 * @return
 	 */

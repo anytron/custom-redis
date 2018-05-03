@@ -22,7 +22,7 @@ import com.custom.redis.util.CustomRedisNodeMonitor;
  * Author : anytron
  * </P>
  * <P>
- * Date : 2013-1-29
+ * Date : 2016-1-29
  * </P>
  */
 public class AppRedis {
@@ -50,7 +50,7 @@ public class AppRedis {
 	 * 判断node is running 
 	 * AppRedis.checkNode()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-5-7 </P>
+	 * <P>Date : 2016-5-7 </P>
 	 * @param node 该node对应配置文件中snode1,如下所示
 	 * <servernode><node><id>snode1</id>
 	 * @return true 正常
@@ -103,7 +103,7 @@ public class AppRedis {
 	 * 初始化cluster与node的对应关系
 	 * AppRedis.initClusterNodesMapping()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-5-7 </P>
+	 * <P>Date : 2016-5-7 </P>
 	 * @param clusterIds
 	 */
 	private void initClusterNodesMapping(List<String> clusterIds){
@@ -172,7 +172,7 @@ public class AppRedis {
 		}
 	}
 
-	public ICustomRedis getHmRedis(String token) {
+	public ICustomRedis getCustomRedis(String token) {
 		if ("ROUTING".equals(dispatch)) {
 			String clusterId = "";
 			if ("HASH".equals(clusterStrategy)) {
@@ -226,13 +226,13 @@ public class AppRedis {
 	 * 执行监控
 	 * AppRedis.executeMoniter()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-5-8 </P>
+	 * <P>Date : 2016-5-8 </P>
 	 * @param serverNodes
 	 */
 	private void executeMoniter() {
 		//对所有cluster进行操作
 		for(String clusterId:clusterIds){
-			String msg = "HmRedis app=" + appId + " clusterId="+clusterId;//打印消息
+			String msg = "CustomRedis app=" + appId + " clusterId="+clusterId;//打印消息
 			String readNodes = clusterNodesMap.get(clusterId);
 			try{
 				//无节点对应关系，配置文件有问题，不在进行后记判断
@@ -266,7 +266,7 @@ public class AppRedis {
 				}
 			}catch (Exception e) {
 				clusterMonitor.put(clusterId,false);
-				log.info("HmRedis appid="+appId+" "+clusterId+" status="+clusterMonitor.get(clusterId)+" monitorinterval="+monitorinterval+" error="+e.getMessage());
+				log.info("CustomRedis appid="+appId+" "+clusterId+" status="+clusterMonitor.get(clusterId)+" monitorinterval="+monitorinterval+" error="+e.getMessage());
 			}
 		}
 	}
@@ -275,7 +275,7 @@ public class AppRedis {
 	 * 监控该应用下redis的cluster是否正常运行
 	 * AppRedis.monitorCluster()<BR>.
 	 * <P>Author : wangchen </P>.
-	 * <P>Date : 2013-4-16 </P>
+	 * <P>Date : 2016-4-16 </P>
 	 */
 	private void monitorCluster(){
 		//初始化clusterMonitor
@@ -298,7 +298,7 @@ public class AppRedis {
 	 * 定时监控该应用下所有Cluster的状态
 	 * <P>File name : AppRedis.java </P>
 	 * <P>Author : wangchen </P>.
-	 * <P>Date : 2013-4-16 </P>
+	 * <P>Date : 2016-4-16 </P>
 	 */
 	private class MonitorCluster implements Runnable {
 		private Thread thread = null;

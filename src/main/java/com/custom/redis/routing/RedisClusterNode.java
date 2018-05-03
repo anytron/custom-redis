@@ -8,7 +8,7 @@ import redis.clients.jedis.exceptions.JedisConnectionException;
  * redis路由监控节点
  * <P>File name : RedisClusterNode.java </P>
  * <P>Author : anytron </P> 
- * <P>Date : 2013-1-29 </P>
+ * <P>Date : 2016-1-29 </P>
  */
 @SuppressWarnings("static-access")
 public class RedisClusterNode  {

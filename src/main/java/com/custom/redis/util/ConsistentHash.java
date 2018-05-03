@@ -10,7 +10,7 @@ import java.util.List;
  * 一致性Hash算法
  * <P>File name : ConsistentHash.java </P>
  * <P>Author : anytron </P> 
- * <P>Date : 2013-1-29 </P>
+ * <P>Date : 2016-1-29 </P>
  */
 public class ConsistentHash<T> {
 	private TreeMap<Long, T> virtualNodes; // 虚拟节点

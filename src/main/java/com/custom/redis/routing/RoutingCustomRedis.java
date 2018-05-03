@@ -24,7 +24,7 @@ import redis.clients.jedis.Tuple;
  * 提供各种redis操作接口
  * <P>File name : .java </P>
  * <P>Author : anytron </P> 
- * <P>Date : 2013-1-29 </P>
+ * <P>Date : 2016-1-29 </P>
  */
 public class RoutingCustomRedis implements ICustomRedis{
 	
@@ -41,7 +41,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 给指定key的字符串值追加 value,返回新字符串值的长度。
 	  * <P>Author : anytron </P>      
-	 * <P>Date : 2013-1-17 </P>
+	 * <P>Date : 2016-1-17 </P>
 	 * @param key
 	 * @param value
 	 * @return
@@ -72,7 +72,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 对key的值做的是减减操作，decr一个不存在 key，则设置key为-1
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @return
 	 * @see com.custom.redis.ICustomRedis#decr(java.lang.String)
@@ -104,7 +104,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 对 key 减去指定值 ， key 不存在时候会设置 key ，并认为原来的 value为0
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param value
 	 * @return
@@ -137,7 +137,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 判断指定键是否存在
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @return
 	 * @see com.custom.redis.ICustomRedis#exists(java.lang.String)
@@ -166,7 +166,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 设置一个key 的过期时间(单位:秒)， 返回 1 成功 ，0 表示 key已经设置过过期时间或者不存在
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param value
 	 * @return
@@ -198,7 +198,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 获取key 对应的string值,如果key 不存在返回 nil。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @return
 	 * @see com.custom.redis.ICustomRedis#get(java.lang.String)
@@ -227,7 +227,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 先获取 key的值，再设置 key的值。如果 key不存在返回 null 。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param value
 	 * @return
@@ -265,7 +265,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 返回 key 中字符串值的子字符串，字符串的截取范围由 start 和 end 两个偏移量决定(包括 start 和 end 在内)。
 	 * 负数偏移量表示从字符串最后开始计数， -1 表示最后一个字符， -2 表示倒数第二个，以此类推。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param start
 	 * @param end
@@ -296,7 +296,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 删除哈希表 key 中的一个或多个指定域，不存在的域将被忽略。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param arg1
 	 * @return
@@ -328,7 +328,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 查看哈希表 key 中，给定域 field 是否存在。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param field
 	 * @return
@@ -358,7 +358,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 返回哈希表 key 中给定域 field 的值。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param filed
 	 * @return
@@ -389,7 +389,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 返回哈希表 key 中，所有的域和值。
 	 * 在返回值里，紧跟每个域名(field name)之后是域的值(value)，所以返回值的长度是哈希表大小的两倍。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @return
 	 * @see com.custom.redis.ICustomRedis#hgetAll(java.lang.String)
@@ -424,7 +424,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 对一个储存字符串值的域 field 执行 HINCRBY 命令将造成一个错误。
 	 * 本操作的值被限制在 64 位(bit)有符号数字表示之内。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param field
 	 * @param increment
@@ -462,7 +462,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 返回哈希表 key 中的所有域。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @return 一个包含哈希表中所有域的表。当 key 不存在时，返回一个空表。
 	 */
@@ -491,7 +491,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 返回哈希表 key 中field的数量。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @return 哈希表中域的数量。当 key 不存在时，返回 0 。
 	 * @see com.custom.redis.ICustomRedis#hlen(java.lang.String)
@@ -523,7 +523,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 如果给定的域不存在于哈希表，那么返回一个 nil 值。
 	 * 因为不存在的 key 被当作一个空哈希表来处理，所以对一个不存在的 key 进行 HMGET 操作将返回一个只带有 nil 值的表。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param field
 	 * @return 一个包含多个给定域的关联值的表，表值的排列顺序和给定域参数的请求顺序一样。
@@ -555,7 +555,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 此命令会覆盖哈希表中已存在的域。
 	 * 如果 key 不存在，一个空哈希表被创建并执行 HMSET 操作。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param arg1
 	 * @return 如果命令执行成功，返回 OK 。当 key 不是哈希表(hash)类型时，返回一个错误。
@@ -589,7 +589,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 如果 key 不存在，一个新的哈希表被创建并进行 HSET 操作。
 	 * 如果域 field 已经存在于哈希表中，旧值将被覆盖。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param field
 	 * @param value
@@ -626,7 +626,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 若域 field 已经存在，该操作无效。
 	 * 如果 key 不存在，一个新哈希表被创建并执行 HSETNX 命令。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param arg0
 	 * @param field
 	 * @param value
@@ -661,7 +661,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 返回哈希表 key 中所有域的值。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param arg0
 	 * @return 一个包含哈希表中所有值的表。
 	  		        当 key 不存在时，返回一个空表。
@@ -695,7 +695,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 如果值包含错误的类型，或字符串类型的值不能表示为数字，那么返回一个错误。
 	 * 本操作的值限制在 64 位(bit)有符号数字表示之内。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @return 执行 INCR 命令之后 key 的值。
 	 * @see com.custom.redis.ICustomRedis#incr(java.lang.String)
@@ -732,7 +732,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 本操作的值限制在 64 位(bit)有符号数字表示之内。
 	 * 关于递增(increment) / 递减(decrement)操作的更多信息，参见 INCR 命令。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param increment
 	 * @return 加上 increment 之后， key 的值。
@@ -769,7 +769,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 你也可以使用负数下标，以 -1 表示列表的最后一个元素， -2 表示列表的倒数第二个元素，以此类推。
 	 * 如果 key 不是列表类型，返回一个错误。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param index
 	 * @return 列表中下标为 index 的元素。
@@ -804,7 +804,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 当 key 不存在时， key 被视为空列表，不执行任何操作。
 	 * 如果 key 不是列表类型，返回一个错误。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param position
 	 * @param pivot
@@ -844,7 +844,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 如果 key 不存在，则 key 被解释为一个空列表，返回 0 .
 	 * 如果 key 不是列表类型，返回一个错误。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @return 列表 key 的长度。
 	 * @see com.custom.redis.ICustomRedis#llen(java.lang.String)
@@ -874,7 +874,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 移除并返回列表 key 的头元素。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @return 列表的头元素。
 			        当 key 不存在时，返回 nil 。
@@ -910,7 +910,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 如果 key 不存在，一个空列表会被创建并执行 LPUSH 操作。
 	 * 当 key 存在但不是列表类型时，返回一个错误。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param values
 	 * @return 执行 LPUSH 命令后，列表的长度。
@@ -944,7 +944,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 将值 value 插入到列表 key 的表头，当且仅当 key 存在并且是一个列表。
 	 * 和 LPUSH 命令相反，当 key 不存在时， LPUSHX 命令什么也不做。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param value
 	 * @return LPUSHX 命令执行之后，表的长度
@@ -978,7 +978,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 下标(index)参数 start 和 stop 都以 0 为底，也就是说，以 0 表示列表的第一个元素，以 1 表示列表的第二个元素，以此类推。
 	 * 你也可以使用负数下标，以 -1 表示列表的最后一个元素， -2 表示列表的倒数第二个元素，以此类推。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @param start
 	 * @param end
@@ -1014,7 +1014,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * count < 0 : 从表尾开始向表头搜索，移除与 value 相等的元素，数量为 count 的绝对值。
 	 * count = 0 : 移除表中所有与 value 相等的值。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param count
 	 * @param value
@@ -1051,7 +1051,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 将列表 key 下标为 index 的元素的值设置为 value 。
 	 * 当 index 参数超出范围，或对一个空列表( key 不存在)进行 LSET 时，返回一个错误。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param index
 	 * @param value
@@ -1090,7 +1090,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 你也可以使用负数下标，以 -1 表示列表的最后一个元素， -2 表示列表的倒数第二个元素，以此类推。
 	 * 当 key 不是列表类型时，返回一个错误。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param start
 	 * @param end
@@ -1125,7 +1125,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 移除并返回列表 key 的尾元素。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @return 列表的尾元素。
 			        当 key 不存在时，返回 nil 。
@@ -1161,7 +1161,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 如果 key 不存在，一个空列表会被创建并执行 RPUSH 操作。
 	 * 当 key 存在但不是列表类型时，返回一个错误。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param value
 	 * @return
@@ -1195,7 +1195,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 将值 value 插入到列表 key 的表尾，当且仅当 key 存在并且是一个列表。
 	 * 和 RPUSH 命令相反，当 key 不存在时， RPUSHX 命令什么也不做。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param value
 	 * @return RPUSHX 命令执行之后，表的长度。
@@ -1231,7 +1231,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 假如 key 不存在，则创建一个只包含 member 元素作成员的集合。
 	 * 当 key 不是集合类型时，返回一个错误。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param member
 	 * @return 被添加到集合中的新元素的数量，不包括被忽略的元素。
@@ -1264,7 +1264,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 返回集合 key 的基数(集合中元素的数量)。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @return
 	 * @see com.custom.redis.ICustomRedis#scard(java.lang.String)
@@ -1294,7 +1294,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 将字符串值 value 关联到 key 。
 	 * 如果 key 已经持有其他值， SET 就覆写旧值，无视类型。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param value
 	 * @return 总是返回 OK ，因为 SET 不可能失败。
@@ -1328,7 +1328,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 将字符串值 value 关联到 key 。
 	 * 如果 key 已经持有其他值， SET 就覆写旧值，无视类型。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param value
 	 * @return 总是返回 OK ，因为 SET 不可能失败。
@@ -1366,7 +1366,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 将值 value 关联到 key ，并将 key 的生存时间设为 seconds (以秒为单位)。
 	 * 如果 key 已经存在， SETEX 命令将覆写旧值。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param seconds
 	 * @param value
@@ -1404,7 +1404,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 获取key 对应的string值,如果key 不存在返回 nil。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param key
 	 * @return
 	 * @see com.custom.redis.ICustomRedis#get(java.lang.String)
@@ -1484,7 +1484,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 字符串会进行伸展(grown)以确保它可以将 value 保存在指定的偏移量上。当字符串值进行伸展时，空白位置以 0 填充。
 	 * offset 参数必须大于或等于 0 ，小于 2^32 (bit 映射被限制在 512 MB 之内)。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param offset
 	 * @param value
@@ -1519,7 +1519,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 将值 value 关联到 key ，并将 key 的生存时间设为 seconds (以秒为单位)。
 	 * 如果 key 已经存在， SETEX 命令将覆写旧值。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param seconds
 	 * @param value
@@ -1554,7 +1554,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 将 key 的值设为 value ，当且仅当 key 不存在。
 	 * 若给定的 key 已经存在，则 SETNX 不做任何动作。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param value
 	 * @return 设置成功，返回 1 。
@@ -1589,7 +1589,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 用 value 参数覆写(overwrite)给定 key 所储存的字符串值，从偏移量 offset 开始。
 	 * 不存在的 key 当作空白字符串处理。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param offset
 	 * @param value
@@ -1622,7 +1622,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 判断 member 元素是否集合 key 的成员。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param member
 	 * @return 如果 member 元素是集合的成员，返回 1 。
@@ -1655,7 +1655,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 返回集合 key 中的所有成员。
 	 * 不存在的 key 被视为空集合。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @return 集合中的所有成员。
 	 * @see com.custom.redis.ICustomRedis#smembers(java.lang.String)
@@ -1686,7 +1686,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 返回给定列表、集合、有序集合 key 中经过排序的元素。
 	 * 排序默认以数字作为对象，值被解释为双精度浮点数，然后进行比较。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @return
 	 * @see com.custom.redis.ICustomRedis#sort(java.lang.String)
@@ -1717,7 +1717,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 返回或保存给定列表、集合、有序集合 key 中经过排序的元素。
 	 * 排序默认以数字作为对象，值被解释为双精度浮点数，然后进行比较。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param param
 	 * @return
@@ -1757,7 +1757,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 返回集合中的一个随机元素。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @return
 	 * @see com.custom.redis.ICustomRedis#srandmember(java.lang.String)
@@ -1788,7 +1788,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 移除集合 key 中的一个或多个 member 元素，不存在的 member 元素会被忽略。
 	 * 当 key 不是集合类型，返回一个错误。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param member
 	 * @return 被成功移除的元素的数量，不包括被忽略的元素。
@@ -1821,7 +1821,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 以秒为单位，返回给定 key 的剩余生存时间(TTL, time to live)。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @return 当 key 不存在时，返回 -2 。
 				当 key 存在但没有设置剩余生存时间时，返回 -1 。
@@ -1853,7 +1853,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 返回 key 所储存的值的类型。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @return
 	 			none (key不存在)
@@ -1889,7 +1889,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 将一个或多个 member 元素及其 score 值加入到有序集 key 当中。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param arg1
 	 * @return 被成功添加的新成员的数量，不包括那些被更新的、已经存在的成员。
@@ -1925,7 +1925,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 如果 key 不存在，则创建一个空的有序集并执行 ZADD 操作。
 	 * 当 key 存在但不是有序集类型时，返回一个错误。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param score
 	 * @param member
@@ -1958,7 +1958,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 返回有序集 key 的基数。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @return 当 key 存在且是有序集类型时，返回有序集的基数。
 				当 key 不存在时，返回 0 。
@@ -1989,7 +1989,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 返回有序集 key 中， score 值在 min 和 max 之间(默认包括 score 值等于 min 或 max )的成员的数量。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param min
 	 * @param max
@@ -2050,7 +2050,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	 * 当 key 不是有序集类型时，返回一个错误。
 	 * score 值可以是整数值或双精度浮点数。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param increment
 	 * @param member
@@ -2083,7 +2083,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 返回有序集 key 中，指定区间内的成员。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param start
 	 * @param stop
@@ -2115,7 +2115,7 @@ public class RoutingCustomRedis implements ICustomRedis{
 	/**
 	 * 返回有序集 key 中，所有 score 值介于 min 和 max 之间(包括等于 min 或 max )的成员。有序集成员按 score 值递增(从小到大)次序排列。
 	 * <P>Author : anytron </P>.
-	 * <P>Date : 2013-2-1 </P>
+	 * <P>Date : 2016-2-1 </P>
 	 * @param key
 	 * @param min
 	 * @param max

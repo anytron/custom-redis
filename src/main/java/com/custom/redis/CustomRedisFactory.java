@@ -15,13 +15,13 @@ import com.custom.redis.util.CustomRedisNodeMonitor;
 /**
  * 
  * <P>
- * File name : hmRedisFactory.java
+ * File name : CustomRedisFactory.java
  * </P>
  * <P>
  * Author : anytron
  * </P>
  * <P>
- * Date : 2013-1-29
+ * Date : 2016-1-29
  * </P>
  */
 public class CustomRedisFactory {
@@ -40,27 +40,27 @@ public class CustomRedisFactory {
 	}
 	
 	static {
-		System.out.println("HmRedis init begin!!!");
+		System.out.println("CustomRedis init begin!!!");
 		//初始化配置文件
 		try {
 			routingConfig = RoutingConfigManager.getInstance();
 		} catch (Exception e) {
-			log.error("HmRedis init custom-redis.xml error cause:"+e.getMessage());
-			System.out.println("HmRedis init custom-redis.xml error cause:"+e.getMessage());
+			log.error("CustomRedis init custom-redis.xml error cause:"+e.getMessage());
+			System.out.println("CustomRedis init custom-redis.xml error cause:"+e.getMessage());
 			e.printStackTrace();
 		}
-		System.out.println("HmRedis init custom-redis.xml success!!!");
+		System.out.println("CustomRedis init custom-redis.xml success!!!");
 		//初始化cluster
 		if(routingConfig!=null){
 			String available = routingConfig.getString("available");
 			if(available!=null&&available.equals("false")){
-				System.out.println("HmRedis available is "+available + " HmRedis do not start!!!");
-				log.info("HmRedis available is "+available + " HmRedis Do not start!!!");
+				System.out.println("CustomRedis available is "+available + " CustomRedis do not start!!!");
+				log.info("CustomRedis available is "+available + " CustomRedis Do not start!!!");
 			}else{
-				System.out.println("HmRedis HmRedisNodeMonitor start !!!");
+				System.out.println("CustomRedis CustomRedisNodeMonitor start !!!");
 				//启动节点监控
 				CustomRedisNodeMonitor.getInstance();
-				System.out.println("HmRedis HmRedisNodeMonitor start success!!!");
+				System.out.println("CustomRedis CustomRedisNodeMonitor start success!!!");
 				@SuppressWarnings("unchecked")
 				List<String> appNodesList = routingConfig.getList("appnode.anode.id");
 				for (int clusterIndex = 0; clusterIndex < appNodesList.size(); clusterIndex++) {
@@ -73,15 +73,15 @@ public class CustomRedisFactory {
 					List<String> clusterIds = getClusterByString(clusternodes);
 					AppRedis appRedis = new AppRedis(appnodeId, dispatch, clusterstrategy, clusterIds, ismonitor, monitorinterval);
 					appCustomRedis.put(appnodeId,appRedis);
-					log.info("HmRedis init app="+appnodeId+" success!");
+					log.info("CustomRedis init app="+appnodeId+" success!");
 				}
-				log.info("HmRedis init all app("+appNodesList.size()+") start success!");
+				log.info("CustomRedis init all app("+appNodesList.size()+") start success!");
 			}
 		}else{
-			System.out.println("HmRedis custom-redis.xml can not read HmRedis Do not start!!!");
-			log.error("HmRedis custom-redis.xml can not read HmRedis Do not start!!!");
+			System.out.println("CustomRedis custom-redis.xml can not read CustomRedis Do not start!!!");
+			log.error("CustomRedis custom-redis.xml can not read CustomRedis Do not start!!!");
 		}
-		System.out.println("HmRedis init Finish!!!");
+		System.out.println("CustomRedis init Finish!!!");
 	}
 
 	private static List<String> getClusterByString(String clusternodes) {
@@ -106,7 +106,7 @@ public class CustomRedisFactory {
 		if(redisApp ==null){
 			return null;
 		}
-		return redisApp.getHmRedis(token);
+		return redisApp.getCustomRedis(token);
 	}
 
 	public List<ICustomRedis> getAllCustomRedisByAppId(String appId) {
@@ -153,16 +153,16 @@ public class CustomRedisFactory {
 		//
 		//List<Map<String,String>> list = new ArrayList<Map<String,String>>();
 		
-//		redis1 = f.getHmRedisByAppId("degrade", "11");
-//		// IHmRedis redis2 = f.getHmRedisByAppId("degrade", "12");
-//		// IHmRedis redis3 = f.getHmRedisByAppId("degrade", "13");
-//		// IHmRedis redis4 = f.getHmRedisByAppId("degrade", "14");
-//		// IHmRedis redis5 = f.getHmRedisByAppId("degrade", "15");
-//		// IHmRedis redis6 = f.getHmRedisByAppId("degrade", "16");
-//		// IHmRedis redis7 = f.getHmRedisByAppId("degrade", "17");
-//		// IHmRedis redis8 = f.getHmRedisByAppId("degrade", "18");
-//		// IHmRedis redis9 = f.getHmRedisByAppId("degrade", "19");
-//		// IHmRedis redis10 = f.getHmRedisByAppId("degrade", "20");
+//		redis1 = f.getCustomRedisByAppId("degrade", "11");
+//		// ICustomRedis redis2 = f.getCustomRedisByAppId("degrade", "12");
+//		// ICustomRedis redis3 = f.getCustomRedisByAppId("degrade", "13");
+//		// ICustomRedis redis4 = f.getCustomRedisByAppId("degrade", "14");
+//		// ICustomRedis redis5 = f.getCustomRedisByAppId("degrade", "15");
+//		// ICustomRedis redis6 = f.getCustomRedisByAppId("degrade", "16");
+//		// ICustomRedis redis7 = f.getCustomRedisByAppId("degrade", "17");
+//		// ICustomRedis redis8 = f.getCustomRedisByAppId("degrade", "18");
+//		// ICustomRedis redis9 = f.getCustomRedisByAppId("degrade", "19");
+//		// ICustomRedis redis10 = f.getCustomRedisByAppId("degrade", "20");
 //		//
 		 //System.out.println(redis1.get("ypj_test"));
 //		// System.out.println(redis2.get("zou1"));
@@ -174,9 +174,9 @@ public class CustomRedisFactory {
 //		// System.out.println(redis8.get("zou1"));
 //		// System.out.println(redis9.get("zou1"));
 //		for(int i=0;i<100000;i++){
-////			redis1 = f.getHmRedisByAppId("degrade", "1");
+////			redis1 = f.getCustomRedisByAppId("degrade", "1");
 ////			if(redis1!=null)System.out.println("degrade redis1="+redis1.get("MONITOR_CLUSTER_KEY"));
-//			redis1 = f.getHmRedisByAppId("other", "1");
+//			redis1 = f.getCustomRedisByAppId("other", "1");
 //			if(redis1!=null)System.out.println("other redis1="+redis1.get("MONITOR_CLUSTER_KEY"));
 //		}
 	
@@ -184,7 +184,7 @@ public class CustomRedisFactory {
 //		redis1.decrBy("key啊发发1", 1);
 //		System.out.println(redis1.get("key啊发发1"));
 ////		for (int i = 0; i < 1; i++) {
-////			redis1 = f.getHmRedisByAppId("degrade", i + "");
+////			redis1 = f.getCustomRedisByAppId("degrade", i + "");
 ////			System.out.println(redis1.get("key啊发发"));
 ////			redis1.decrBy("key啊发发", 1);
 ////			System.out.println(redis1.get("key啊发发"));

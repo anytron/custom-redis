@@ -12,7 +12,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 /**
- * HmRedis所有节点监控对象
+ * CustomRedis所有节点监控对象
  * 从配置文件中读取所有节点<servernode>,根据参数初始化redis并执行写入和读取操作用于测试该节点是否正常
  * @author anytron
  */
@@ -49,7 +49,7 @@ public class CustomRedisNodeMonitor implements Runnable {
 			NODE_MONITOR_INTERVAL = Long.parseLong(temp);
 		} catch (Exception e) {
 			e.printStackTrace();
-			log.error("HmRedis error nodemonitorinterval cause:"+e.getMessage());
+			log.error("CustomRedis error nodemonitorinterval cause:"+e.getMessage());
 		}
 		thread = new Thread(this);
 		thread.start();
@@ -59,10 +59,10 @@ public class CustomRedisNodeMonitor implements Runnable {
 				Thread.sleep(2000);//第一次
 			} catch (InterruptedException e) {
 				e.printStackTrace();
-				log.error("HmRedis error new HmRedisNodeMonitor cause:"+e.getMessage());
+				log.error("CustomRedis error new CustomRedisNodeMonitor cause:"+e.getMessage());
 			}
 		}
-		log.info("HmRedis info HmRedisNodeMonitor start success!");
+		log.info("CustomRedis info CustomRedisNodeMonitor start success!");
 	}
 	
 	
@@ -89,7 +89,7 @@ public class CustomRedisNodeMonitor implements Runnable {
 	 * 执行监控
 	 * AppRedis.executeMoniter()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-5-8 </P>
+	 * <P>Date : 2016-5-8 </P>
 	 * @param serverNodes
 	 */
 	private void executeMonitor(HashMap<String, JedisPool> serverNodes) {
@@ -106,17 +106,17 @@ public class CustomRedisNodeMonitor implements Runnable {
 				String value = jedis.get(CustomRedisConstants.MONITOR_CLUSTER_KEY);
 				if(value.equals(CustomRedisConstants.MONITOR_CLUSTER_VALUE)){
 					nodeMonitor.put(entry.getKey(), true);
-					log.info("HmRedis node="+entry.getKey() +" status=running ");
+					log.info("CustomRedis node="+entry.getKey() +" status=running ");
 				}else{
 					flag = false;
 					nodeMonitor.put(entry.getKey(), false);
-					log.error("HmRedis node="+entry.getKey() +" status=down ");
+					log.error("CustomRedis node="+entry.getKey() +" status=down ");
 				}
 			}catch(Exception e){
 				e.printStackTrace();
 				flag = false;
 				nodeMonitor.put(entry.getKey(), false);
-				log.error("HmRedis node="+entry.getKey() +" status=exception ");
+				log.error("CustomRedis node="+entry.getKey() +" status=exception ");
 			}finally{
 				if(jedis != null){
 					try {
@@ -127,7 +127,7 @@ public class CustomRedisNodeMonitor implements Runnable {
 				}
 			}
 		}
-		if(flag)log.info("HmRedis all nodes("+serverNodes.size()+") test success!");
+		if(flag)log.info("CustomRedis all nodes("+serverNodes.size()+") test success!");
 	}
 	
 	//获取某个node的当前状态

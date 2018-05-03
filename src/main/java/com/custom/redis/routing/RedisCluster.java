@@ -15,7 +15,7 @@ import redis.clients.jedis.JedisPool;
  * 后期实现redis节点监控 现阶段还没有实现
  * <P>File name : RedisCluster.java </P>
  * <P>Author : anytron </P> 
- * <P>Date : 2013-1-29 </P>
+ * <P>Date : 2016-1-29 </P>
  */
 public class RedisCluster {
 	/**
@@ -103,7 +103,7 @@ public class RedisCluster {
 	 * 获取读连接池，不依赖任何规则，先读取主节点，主节点有问题读取从节点
 	 * RedisCluster.getReadRedisPool()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param token
 	 * @return
 	 * @version 2.0 
@@ -154,7 +154,7 @@ public class RedisCluster {
 	 * 现支持hash策略  复写策略
 	 * RedisCluster.getWriteRedisPool()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param token
 	 * @return
 	 */
@@ -208,7 +208,7 @@ public class RedisCluster {
 	 * 增加读节点
 	 * RedisCluster.addReadRedisNode()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param node
 	 */
 	protected void addReadRedisNode(String node){
@@ -218,7 +218,7 @@ public class RedisCluster {
 	 * 增加写节点
 	 * RedisCluster.addWriteRedisNode()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param node
 	 */
 	protected void addWriteRedisNode(String node){
@@ -228,7 +228,7 @@ public class RedisCluster {
 	 * 移除读节点
 	 * RedisCluster.removeReadRedisNode()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param node
 	 */
 	protected void removeReadRedisNode(String node){
@@ -241,7 +241,7 @@ public class RedisCluster {
 	 * 移除写节点
 	 * RedisCluster.removeWriteRedisNode()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @param node
 	 */
 	protected void removeWriteRedisNode(String node){
@@ -254,7 +254,7 @@ public class RedisCluster {
 	 * 获取节点ID
 	 * RedisCluster.getClusterId()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-1-31 </P>
+	 * <P>Date : 2016-1-31 </P>
 	 * @return
 	 */
 	public String getClusterId() {

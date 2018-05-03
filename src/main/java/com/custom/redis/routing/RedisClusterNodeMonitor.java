@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
  * redis路由监控控制类
  * <P>File name : RedisRedisClusterNodeMonitor.java </P>
  * <P>Author : anytron </P> 
- * <P>Date : 2013-1-29 </P>
+ * <P>Date : 2016-1-29 </P>
  */
 public class RedisClusterNodeMonitor implements Runnable {
 	private long interval = 60 * 1000;

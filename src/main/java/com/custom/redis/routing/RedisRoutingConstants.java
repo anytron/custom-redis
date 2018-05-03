@@ -4,7 +4,7 @@ package com.custom.redis.routing;
  * redis路由静态常量
  * <P>File name : RedisRoutingConstants.java </P>
  * <P>Author : anytron </P> 
- * <P>Date : 2013-1-29 </P>
+ * <P>Date : 2016-1-29 </P>
  */
 public class RedisRoutingConstants {
     //集群类型，READONLY只读，READWRITE读写,READMUTIWRITE 读并且多写 

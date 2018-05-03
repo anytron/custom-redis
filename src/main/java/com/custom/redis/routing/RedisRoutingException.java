@@ -4,7 +4,7 @@ package com.custom.redis.routing;
  * redis路由异常类
  * <P>File name : RedisRoutingException.java </P>
  * <P>Author : anytron </P> 
- * <P>Date : 2013-1-29 </P>
+ * <P>Date : 2016-1-29 </P>
  */
 public class RedisRoutingException extends RuntimeException {
 	/**

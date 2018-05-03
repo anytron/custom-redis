@@ -12,7 +12,7 @@ import redis.clients.jedis.BinaryClient.LIST_POSITION;
  * redis各种接口
  * <P>File name : ILafasoRedis.java </P>
  * <P>Author : Dick </P> 
- * <P>Date : 2013-1-16 </P>
+ * <P>Date : 2016-1-16 </P>
  */
 public interface ICustomRedis {
 	
@@ -20,7 +20,7 @@ public interface ICustomRedis {
 	 * 给指定key的字符串值追加 value,返回新字符串值的长度。
 	 * ILafasoRedis.del()<BR>
 	  * <P>Author : Dick </P>  
-	 * <P>Date : 2013-1-16 </P>
+	 * <P>Date : 2016-1-16 </P>
 	 * @param arg0
 	 * @return
 	 */
@@ -519,7 +519,7 @@ public interface ICustomRedis {
 	 * 是设置多个key-value值   参数（key1,value1,key2,value2,...,keyn,valuen）
 	 * ILafasoRedis.mset()<BR>
 	  * <P>Author : anytron </P>  
-	 * <P>Date : 2013-5-9 </P>
+	 * <P>Date : 2016-5-9 </P>
 	 * @param keysvalues
 	 * @return OK
 	 */
