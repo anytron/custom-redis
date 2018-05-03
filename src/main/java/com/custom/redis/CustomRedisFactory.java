@@ -18,7 +18,7 @@ import com.custom.redis.util.CustomRedisNodeMonitor;
  * File name : hmRedisFactory.java
  * </P>
  * <P>
- * Author : Dick
+ * Author : anytron
  * </P>
  * <P>
  * Date : 2013-1-29
