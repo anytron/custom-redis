@@ -42,11 +42,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <redisrouting>	
 	<appnode>
-		<!—- <appnode>下配置多个应用 -->
+		<!—- appnode下配置多个应用 -->
 		<anode>
 			<!—- id=应用名对应示例java代码中的cloudyCart -->
 			<id>cloudyCart</id>
-		    <!-- clusternodes 配置多个cluster,多个用竖线分割 -->
+		    	<!-- clusternodes 配置多个cluster,多个用竖线分割 -->
 			<clusternodes>cluster1|cluster2|cluster3</clusternodes>
 			<!—- dispatch 暂时无意义-->
 			<dispatch>ROUTING</dispatch>
